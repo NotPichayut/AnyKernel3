@@ -38,8 +38,8 @@ choose_kernel() {
   ui_print " "
   ui_print "Kernel Version Selection:"
   ui_print " "
-  ui_print "  VOL + : non-KSU"
-  ui_print "  VOL - : KSU"
+  ui_print "  VOL + : Vanilla variant"
+  ui_print "  VOL - : KSU variant"
   ui_print " "
   ui_print "Waiting for input... "
   ui_print " "
@@ -65,12 +65,12 @@ if [ -f "$AKHOME/Image.ksu" ] && [ -f "$AKHOME/Image.noksu" ]; then
   case $? in
     1)
       ui_print " "
-      ui_print "Selected: non-KSU Kernel"
+      ui_print "Selected: Vanilla variant Kernel"
       mv -f "$AKHOME/Image.noksu" "$AKHOME/Image"
       ;;
     2)
       ui_print " "
-      ui_print "Selected: KSU Kernel"
+      ui_print "Selected: KSU variant Kernel"
       mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
       ;;
   esac
@@ -80,11 +80,11 @@ elif [ -f "$AKHOME/Image" ]; then
   mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
 elif [ -f "$AKHOME/Image.ksu" ]; then
   ui_print " "
-  ui_print "Only KernelSU version found, flashing it"
+  ui_print "Only KernelSU variant version found, flashing it"
   mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
 elif [ -f "$AKHOME/Image.noksu" ]; then
   ui_print " "
-  ui_print "Only Standard version found, flashing it"
+  ui_print "Only Vanilla variant version found, flashing it"
   mv -f "$AKHOME/Image.noksu" "$AKHOME/Image"
 fi
 

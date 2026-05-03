@@ -4,16 +4,16 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=by yougotme101 @ github
+kernel.string=by NotPichayut @ github
 do.devicecheck=1
 do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=topaz
-device.name2=tapas
-device.name3=sapphiren
-device.name4=sapphire
+device.name1=sapphire
+device.name2=sapphiren
+device.name3=tapas
+device.name4=topaz
 device.name5=xun
 device.name6=creek
 supported.versions=13-16
@@ -38,7 +38,7 @@ choose_kernel() {
   ui_print " "
   ui_print "Kernel Version Selection:"
   ui_print " "
-  ui_print "  VOL + : Vanilla variant"
+  ui_print "  VOL + : Non Ksu variant"
   ui_print "  VOL - : KSU variant"
   ui_print " "
   ui_print "Waiting for input... "
